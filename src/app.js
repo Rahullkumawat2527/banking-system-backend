@@ -12,6 +12,9 @@ app.use(express.json())
 
 app.use(cookieParser())
 
+app.get("/",(req,res) => {
+    res.send("banking service is up and running")
+})
 // auth prefix
 app.use("/api/auth", authRouter)
 
