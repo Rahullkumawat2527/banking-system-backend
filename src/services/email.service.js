@@ -1,14 +1,8 @@
-import nodemailer from "nodemailer"
 import dotenv from "dotenv"
-import fs from 'fs';
+dotenv.config()
+import nodemailer from "nodemailer"
 
-// Check if .env exists before loading
-if (fs.existsSync('.env')) {
-    dotenv.config();
-    console.log('✅ .env file loaded');
-} else {
-    console.log('⚠️ No .env file found, using environment variables');
-}
+
 
 
 const transporter = nodemailer.createTransport({
