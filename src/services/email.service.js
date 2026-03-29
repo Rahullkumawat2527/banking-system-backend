@@ -64,13 +64,4 @@ async function sendVerificationEmail(userEmail, name) {
 }
 
 
-async function sendTransactionEmail(userEmail, name, amount, toAccount) {
-    const subject = 'Amount transfer'
-    const text = `Hello ${name}, 
-     Thank You for making transaction at rahul's banking system`
-    const html = `<p>Hello ${name},</p><p>Thank you for making transaction at rahul's banking system</p><p>a payment of amount ${amount} to the account id : ${toAccount} have been registered successfully<br> the rahul's backend team</p>`
-
-    await sendEmail(userEmail, name, amount, toAccount)
-
-}
 export { sendVerificationEmail, sendTransactionEmail }
