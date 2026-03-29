@@ -74,7 +74,7 @@ async function loginUser(req, res) {
             })
     }
 
-    const isValidPassword = user.comparePassword(password)
+    const isValidPassword = await user.comparePassword(password)
 
     if (!isValidPassword) {
         return res.status(401)
