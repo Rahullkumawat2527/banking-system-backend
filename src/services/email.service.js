@@ -64,4 +64,4 @@ async function sendVerificationEmail(userEmail, name) {
 }
 
 
-export { sendVerificationEmail, sendTransactionEmail }
+export { sendVerificationEmail }
