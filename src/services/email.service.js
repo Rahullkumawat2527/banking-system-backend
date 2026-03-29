@@ -1,7 +1,15 @@
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
-import accountModel from "../models/account.models.js"
-dotenv.config()
+import fs from 'fs';
+
+// Check if .env exists before loading
+if (fs.existsSync('.env')) {
+    dotenv.config();
+    console.log('✅ .env file loaded');
+} else {
+    console.log('⚠️ No .env file found, using environment variables');
+}
+
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
